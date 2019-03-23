@@ -9,7 +9,7 @@ body {
   perspective: 800px;
   width: 300px;
   height: 300px;
-  margin: 300px;
+  margin: 100px;
 }
 .transBox {
   width: 100%;
@@ -18,7 +18,7 @@ body {
   position: relative; 
   transform-style: preserve-3d;
   transform-origin: 50% 50% -150px;
-  animation: 1000ms ease-out 0ms 1 normal forwards;
+  animation: 500ms ease-out 0ms 1 normal forwards;
 }
 .transBox > .pic,  
 .transBox > .text {
@@ -58,84 +58,84 @@ body {
 }
 
 
-.clockwise-top .text,
-.anticlockwise-top .text {
+.out-top .text,
+.in-top .text {
   transform-origin: 0 100%;
   transform: translate3d(0, -100%, 0) rotate3d(1, 0, 0, 90deg);
 }
-.anticlockwise-top .transBox {
-  animation-name: anticlockwise-top;
+.out-top .transBox {
+  animation-name: out-top;
 }
-.clockwise-top .transBox {
-  animation-name: clockwise-top;
+.in-top .transBox {
+  animation-name: in-top;
 }
-@keyframes anticlockwise-top {
+@keyframes out-top {
   from { transform: rotate3d(0, 0, 0, 0deg)}
   to { transform: rotate3d(-1, 0, 0, 90deg)}
 }
-@keyframes clockwise-top {
+@keyframes in-top {
   from { transform: rotate3d(-1, 0, 0, 90deg) }
   to { transform: rotate3d(0, 0, 0, 0deg) }
 }
 
-.clockwise-bottom .text,
-.anticlockwise-bottom .text {
+.out-bottom .text,
+.in-bottom .text {
   transform-origin: 0 0;
   transform: translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg);
 }
-.anticlockwise-bottom .transBox {
-  animation-name: anticlockwise-bottom;
+.in-bottom .transBox {
+  animation-name: in-bottom;
 }
-.clockwise-bottom .transBox {
-  animation-name: clockwise-bottom;
+.out-bottom .transBox {
+  animation-name: out-bottom;
 }
-@keyframes clockwise-bottom {
+@keyframes out-bottom {
   from { transform: rotate3d(0, 0, 0, 0deg)}
   to { transform: rotate3d(1, 0, 0, 90deg)}
 }
-@keyframes anticlockwise-bottom {
+@keyframes in-bottom {
   from { transform: rotate3d(1, 0, 0, 90deg) }
   to { transform: rotate3d(0, 0, 0, 0deg) }
 }
 
 
-.anticlockwise-left .text,
-.clockwise-left .text {
+.out-left .text,
+.in-left .text {
   transform-origin: 100%; 0;
   transform: translate3d(-100%, 0, 0) rotate3d(0, 1, 0, -90deg);
 }
-.clockwise-left .transBox {
-  animation-name: clockwise-left;
+.out-left .transBox {
+  animation-name: out-left;
 }
-.anticlockwise-left .transBox {
-  animation-name: anticlockwise-left;
+.in-left .transBox {
+  animation-name: in-left;
 }
-@keyframes clockwise-left {
+@keyframes out-left {
   from { transform: rotate3d(0, 0, 0, 0deg)}
   to { transform: rotate3d(0, 1, 0, 90deg)}
 }
-@keyframes anticlockwise-left {
+@keyframes in-left {
   from { transform: rotate3d(0, 1, 0, 90deg) }
   to { transform: rotate3d(0, 0, 0, 0deg) }
 }
 
 
-.anticlockwise-right .text,
-.clockwise-right .text {
+.out-right .text,
+.in-right .text {
   transform-origin: 0; 0;
   transform: translate3d(100%, 0, 0) rotate3d(0, 1, 0, 90deg);
 }
-.clockwise-right .transBox {
-  animation-name: clockwise-right;
+.in-right .transBox {
+  animation-name: in-right;
 }
-.anticlockwise-right .transBox {
-  animation-name: anticlockwise-right;
+.out-right .transBox {
+  animation-name: out-right;
 }
-@keyframes anticlockwise-right {
+@keyframes out-right {
   from { transform: rotate3d(0, 0, 0, 0deg)}
   to { transform: rotate3d(0, -1, 0, 90deg)}
 }
-@keyframes clockwise-right {
+@keyframes in-right {
   from { transform: rotate3d(0, -1, 0, 90deg) }
   to { transform: rotate3d(0, 0, 0, 0deg) }
 }
